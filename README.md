@@ -357,3 +357,18 @@ If you use this code in your research, please cite the original GeoSeg repositor
 ## License
 
 GNU GENERAL PUBLIC LICENSE
+
+## Data Visualisation
+
+To visualise the data, use the code:
+
+```
+python quick_viz.py \
+  --image-dir data/Biodiversity_tiff/Train/image \
+  --mask-dir  data/Biodiversity_tiff/Train/masks_converted_rgb \
+  --img-suffix .tif \
+  --mask-suffix .png \
+  --alpha 0.55 \
+  --p-lo 2 --p-hi 98 --gamma 1.1
+```
+
