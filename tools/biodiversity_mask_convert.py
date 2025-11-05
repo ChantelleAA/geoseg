@@ -30,8 +30,8 @@ def seed_everything(seed):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mask-dir", default="data/LoveDA/Train/Rural/masks_png")
-    parser.add_argument("--output-mask-dir", default="data/LoveDA/Train/Rural/masks_png_convert")
+    parser.add_argument("--mask-dir", default="../data/Biodiversity_tiff/Train/masks")
+    parser.add_argument("--output-mask-dir", default="../data/Biodiversity_tiff/Train/masks_png_convert")
     return parser.parse_args()
 
 
