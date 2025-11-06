@@ -10,11 +10,26 @@ import albumentations as albu
 import matplotlib.patches as mpatches
 from PIL import Image, ImageOps
 import random
+from typing import Dict, List, Optional, Tuple, Union
 
 
-CLASSES = ('Forest land', 'Grassland', 'Cropland', 'Settlement', 'Seminatural Grassland')
+# New taxonomy classes
+CLASSES = (
+    'Background',
+    'Forest Land', 
+    'Grassland',   
+    'Cropland',    
+    'Settlement',  
+    'SemiNatural Grassland', 
+)
 
-PALETTE = [[250, 62, 119], [168, 232, 84], [242, 180, 92], [116, 116, 116], [255, 214, 33]]
+PALETTE = [
+    [250, 62, 119], 
+    [168, 232, 84], 
+    [242, 180, 92], 
+    [116, 116, 116], 
+    [255, 214, 33] 
+]
 
 
 ORIGIN_IMG_SIZE = (512, 512)
@@ -66,7 +81,7 @@ def val_aug(img, mask):
 
 
 class BiodiversityTrainDataset(Dataset):
-    def __init__(self, data_root='data/Biodiversity/Train', img_dir='images_png', mosaic_ratio=0.25,
+    def __init__(self, data_root='data/biodiversity/Train', img_dir='images_png', mosaic_ratio=0.25,
                  mask_dir='masks_png_convert', img_suffix='.png', mask_suffix='.png',
                  transform=train_aug, img_size=ORIGIN_IMG_SIZE):
         self.data_root = data_root
@@ -99,7 +114,6 @@ class BiodiversityTrainDataset(Dataset):
         return length
 
     def get_img_ids(self, data_root, img_dir, mask_dir):
-        
 
         rural_img_filename_list = os.listdir(osp.join(data_root, 'Rural', img_dir))
         rural_mask_filename_list = os.listdir(osp.join(data_root, 'Rural', mask_dir))
@@ -175,12 +189,12 @@ class BiodiversityTrainDataset(Dataset):
         return img, mask
 
 
-biodiversity_val_dataset = BiodiversityTrainDataset(data_root='data/Biodiversity/Val', mosaic_ratio=0.0,
-                                        transform=val_aug)
+# biodiversity_val_dataset = BiodiversityTrainDataset(data_root='data/Biodiversity/Val', mosaic_ratio=0.0,
+#                                         transform=val_aug)
 
 
 class BiodiversityTestDataset(Dataset):
-    def __init__(self, data_root='data/Biodiversity/Test', img_dir='images_png',
+    def __init__(self, data_root='data/biodiversity/Test', img_dir='images_png',
                  img_suffix='.png',  mosaic_ratio=0.0,
                  img_size=ORIGIN_IMG_SIZE):
         self.data_root = data_root

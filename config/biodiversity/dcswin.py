@@ -31,7 +31,8 @@ gpus = 'auto'  # default or gpu ids:[0] or gpu nums: 2, more setting can refer t
 resume_ckpt_path = None  # whether continue training with the checkpoint, default None
 
 #  define the network, use pretrained backbone, the weight path of backbone
-net = dcswin_base(num_classes=num_classes, pretrained=True, weight_path='pretrain_weights/stseg_base.pth')
+# net = dcswin_base(num_classes=num_classes, pretrained=True, weight_path='pretrain_weights/stseg_base.pth')
+net = dcswin_base(num_classes=num_classes, pretrained=True)
 
 # define the loss
 loss = JointLoss(SoftCrossEntropyLoss(smooth_factor=0.05, ignore_index=ignore_index),

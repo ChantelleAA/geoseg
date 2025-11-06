@@ -18,12 +18,12 @@ num_classes = 6
 classes = CLASSES
 
 weights_name = "ftunetformer-512-crop-ms-e45"
-weights_path = "model_weights/potsdam/{}".format(weights_name)
+weights_path = "model_weights/biodiversity/{}".format(weights_name)
 test_weights_name = "ftunetformer-512-crop-ms-e45"
-log_name = 'potsdam/{}'.format(weights_name)
+log_name = 'biodiversity/{}'.format(weights_name)
 monitor = 'val_F1'
 monitor_mode = 'max'
-save_top_k = 1
+save_top_k =  3 #1
 save_last = False
 check_val_every_n_epoch = 1
 pretrained_ckpt_path = None # the path for the pretrained model weight
@@ -41,12 +41,14 @@ use_aux_loss = False
 
 # define the dataloader
 
-train_dataset = BiodiversityTrainDataset(data_root='data/Biodiversity/train', mode='train',
+train_dataset = BiodiversityTrainDataset(data_root='data/biodiversity/Train',
                                mosaic_ratio=0.25, transform=train_aug)
 
-val_dataset = biodiversity_val_dataset(transform=val_aug)
-test_dataset = BiodiversityTestDataset(data_root='data/Biodiversity/test',
-                              transform=val_aug)
+# val_dataset = BiodiversityTrainDataset(transform=val_aug)
+val_dataset = BiodiversityTrainDataset(data_root='data/biodiversity/Val', mosaic_ratio=0.0,
+                                        transform=val_aug)
+
+test_dataset = BiodiversityTestDataset(data_root='data/biodiversity/Test')
 
 train_loader = DataLoader(dataset=train_dataset,
                           batch_size=train_batch_size,

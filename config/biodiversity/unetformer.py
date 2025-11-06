@@ -10,6 +10,9 @@ max_epoch = 50 # originally 30
 ignore_index = 0
 train_batch_size = 16
 val_batch_size = 16
+
+# train_batch_size = 4
+# val_batch_size = 4
 lr = 5e-4 # originally 6e-4
 weight_decay = 0.01
 backbone_lr = 5e-5 # originally 6e-5
@@ -59,7 +62,9 @@ def train_aug(img, mask):
 
 train_dataset = BiodiversityTrainDataset(transform=train_aug, data_root='data/biodiversity/Train')
 
-val_dataset = biodiversity_val_dataset
+val_dataset = train_dataset
+
+# val_dataset = biodiversity_val_dataset
 
 test_dataset = BiodiversityTestDataset()
 

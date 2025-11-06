@@ -1,0 +1,126 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+# Allow specific notebooks if needed (uncomment to allow .ipynb files)
+# !important_notebook.ipynb
+
+# DATA - All data directories and files
+data/
+Data/
+DATA/
+dataset/
+datasets/
+Biodiversity_tiff/
+biodiversity/
+biodiversity_combined/
+*_backup/
+*.tif
+*.tiff
+*.geotiff
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.zip
+
+# MODEL WEIGHTS - All checkpoint and model files
+model_weights/
+pretrain_weights/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.pb
+*.weights
+*.safetensors
+
+# Training outputs
+lightning_logs/
+logs/
+outputs/
+results/
+plots/
+quickviz/
+predictions/
+per_class_metrics_comparison/
+more_data/
+nohup.out
+
+# Backups
+*_backup/
+*_original_backup/
+backup*/
+*.bak
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Large analysis files
+*.parquet
+*.feather
+hard_samples_analysis.json
+sample_weights.txt
+diagnostics*.csv
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Keep only structure (allow empty directories with .gitkeep)
+!.gitkeep
+
+# Allow important text files back in
+!requirements.txt
+!README.md
+!LICENSE
+!TRAINING_PIPELINE_SUMMARY.md
+!REPORT_SECTIONS_DRAFT.md
