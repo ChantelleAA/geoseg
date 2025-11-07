@@ -1,0 +1,457 @@
+{
+  "selected_count": 50,
+  "images": [
+    "den0_0041",
+    "biodiversity_2232",
+    "den0_0042",
+    "biodiversity_2185",
+    "biodiversity_2186",
+    "col1_0004",
+    "biodiversity_2233",
+    "biodiversity_2184",
+    "den0_0046",
+    "biodiversity_1100",
+    "biodiversity_1453",
+    "biodiversity_0603",
+    "biodiversity_0626",
+    "biodiversity_0021",
+    "biodiversity_1147",
+    "biodiversity_1161",
+    "biodiversity_0491",
+    "den0_0047",
+    "biodiversity_1915",
+    "col1_0005",
+    "biodiversity_0509",
+    "biodiversity_0555",
+    "biodiversity_0627",
+    "biodiversity_2234",
+    "biodiversity_2230",
+    "biodiversity_0320",
+    "col1_0003",
+    "biodiversity_0361",
+    "biodiversity_0580",
+    "den0_0036",
+    "biodiversity_0696",
+    "biodiversity_1589",
+    "biodiversity_1916",
+    "biodiversity_1164",
+    "biodiversity_1557",
+    "biodiversity_1406",
+    "biodiversity_0381",
+    "den0_0037",
+    "biodiversity_2229",
+    "biodiversity_1099",
+    "biodiversity_0744",
+    "biodiversity_0998",
+    "biodiversity_1500",
+    "biodiversity_1101",
+    "biodiversity_1509",
+    "biodiversity_0537",
+    "biodiversity_0424",
+    "biodiversity_1510",
+    "biodiversity_1962",
+    "biodiversity_0360"
+  ],
+  "metrics": [
+    {
+      "img_id": "den0_0041",
+      "settlement_pct": 41.1712646484375,
+      "seminatural_pct": 0.0,
+      "num_classes": 5,
+      "diversity_score": 1.1529900082569924,
+      "balance_score": 242.38622332475742
+    },
+    {
+      "img_id": "biodiversity_2232",
+      "settlement_pct": 41.361236572265625,
+      "seminatural_pct": 0.5069732666015625,
+      "num_classes": 3,
+      "diversity_score": 0.9173065200929349,
+      "balance_score": 231.23273469555826
+    },
+    {
+      "img_id": "den0_0042",
+      "settlement_pct": 38.59977722167969,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.1908166274044423,
+      "balance_score": 224.90705238244286
+    },
+    {
+      "img_id": "biodiversity_2185",
+      "settlement_pct": 37.40119934082031,
+      "seminatural_pct": 3.5655975341796875,
+      "num_classes": 4,
+      "diversity_score": 1.1118655099199182,
+      "balance_score": 219.90745057039058
+    },
+    {
+      "img_id": "biodiversity_2186",
+      "settlement_pct": 37.13493347167969,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.9679915835815609,
+      "balance_score": 210.35458319421406
+    },
+    {
+      "img_id": "col1_0004",
+      "settlement_pct": 35.17913818359375,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.1168643899873743,
+      "balance_score": 207.0643348178425
+    },
+    {
+      "img_id": "biodiversity_2233",
+      "settlement_pct": 33.93516540527344,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.9158192685236762,
+      "balance_score": 193.83401971160396
+    },
+    {
+      "img_id": "biodiversity_2184",
+      "settlement_pct": 29.91485595703125,
+      "seminatural_pct": 4.7756195068359375,
+      "num_classes": 4,
+      "diversity_score": 1.1413666354046548,
+      "balance_score": 183.37575589262076
+    },
+    {
+      "img_id": "den0_0046",
+      "settlement_pct": 27.913665771484375,
+      "seminatural_pct": 0.0,
+      "num_classes": 5,
+      "diversity_score": 1.3505540175424013,
+      "balance_score": 178.0738690328459
+    },
+    {
+      "img_id": "biodiversity_1100",
+      "settlement_pct": 23.285293579101562,
+      "seminatural_pct": 49.34654235839844,
+      "num_classes": 4,
+      "diversity_score": 1.228000838183541,
+      "balance_score": 173.37974745654245
+    },
+    {
+      "img_id": "biodiversity_1453",
+      "settlement_pct": 28.009414672851562,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.98468924309526,
+      "balance_score": 164.89396579521042
+    },
+    {
+      "img_id": "biodiversity_0603",
+      "settlement_pct": 25.830078125,
+      "seminatural_pct": 5.455780029296875,
+      "num_classes": 4,
+      "diversity_score": 1.1494671365388474,
+      "balance_score": 163.37295200503692
+    },
+    {
+      "img_id": "biodiversity_0626",
+      "settlement_pct": 25.964736938476562,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.1687310450403947,
+      "balance_score": 161.51099514278675
+    },
+    {
+      "img_id": "biodiversity_0021",
+      "settlement_pct": 25.557708740234375,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 0.948082909134796,
+      "balance_score": 157.26937279251985
+    },
+    {
+      "img_id": "biodiversity_1147",
+      "settlement_pct": 23.557281494140625,
+      "seminatural_pct": 11.359405517578125,
+      "num_classes": 4,
+      "diversity_score": 1.2506242285822888,
+      "balance_score": 155.97235251531507
+    },
+    {
+      "img_id": "biodiversity_1161",
+      "settlement_pct": 22.12677001953125,
+      "seminatural_pct": 12.66021728515625,
+      "num_classes": 5,
+      "diversity_score": 1.3939941367193502,
+      "balance_score": 155.9039001074279
+    },
+    {
+      "img_id": "biodiversity_0491",
+      "settlement_pct": 26.27105712890625,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.8691614715863256,
+      "balance_score": 155.04690036039452
+    },
+    {
+      "img_id": "den0_0047",
+      "settlement_pct": 23.766708374023438,
+      "seminatural_pct": 0.0,
+      "num_classes": 5,
+      "diversity_score": 1.0846332060241566,
+      "balance_score": 154.67987393035875
+    },
+    {
+      "img_id": "biodiversity_1915",
+      "settlement_pct": 25.728988647460938,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.9646032973775664,
+      "balance_score": 153.29097621108036
+    },
+    {
+      "img_id": "col1_0005",
+      "settlement_pct": 23.711776733398438,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.2609431023279156,
+      "balance_score": 151.16831469027136
+    },
+    {
+      "img_id": "biodiversity_0509",
+      "settlement_pct": 25.34027099609375,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.8562647367900262,
+      "balance_score": 150.26400234836902
+    },
+    {
+      "img_id": "biodiversity_0555",
+      "settlement_pct": 24.802780151367188,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.9795203959626965,
+      "balance_score": 148.8091047164629
+    },
+    {
+      "img_id": "biodiversity_0627",
+      "settlement_pct": 23.311996459960938,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.0506203124569502,
+      "balance_score": 147.0661854243742
+    },
+    {
+      "img_id": "biodiversity_2234",
+      "settlement_pct": 20.967483520507812,
+      "seminatural_pct": 4.5795440673828125,
+      "num_classes": 5,
+      "diversity_score": 1.419722713300222,
+      "balance_score": 146.3244167692327
+    },
+    {
+      "img_id": "biodiversity_2230",
+      "settlement_pct": 23.467636108398438,
+      "seminatural_pct": 0.72479248046875,
+      "num_classes": 3,
+      "diversity_score": 0.9070912956310697,
+      "balance_score": 141.77148973853724
+    },
+    {
+      "img_id": "biodiversity_0320",
+      "settlement_pct": 20.962905883789062,
+      "seminatural_pct": 6.6715240478515625,
+      "num_classes": 4,
+      "diversity_score": 1.1342927285239794,
+      "balance_score": 139.4932187281109
+    },
+    {
+      "img_id": "col1_0003",
+      "settlement_pct": 21.735763549804688,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 0.9622149813143934,
+      "balance_score": 138.3009675621674
+    },
+    {
+      "img_id": "biodiversity_0361",
+      "settlement_pct": 22.793960571289062,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.7586086218716479,
+      "balance_score": 136.5558890751618
+    },
+    {
+      "img_id": "biodiversity_0580",
+      "settlement_pct": 19.549179077148438,
+      "seminatural_pct": 12.221908569335938,
+      "num_classes": 4,
+      "diversity_score": 1.239605032361862,
+      "balance_score": 136.25289999402878
+    },
+    {
+      "img_id": "den0_0036",
+      "settlement_pct": 21.204376220703125,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 0.9572426875191637,
+      "balance_score": 135.59430797870726
+    },
+    {
+      "img_id": "biodiversity_0696",
+      "settlement_pct": 20.557022094726562,
+      "seminatural_pct": 1.1356353759765625,
+      "num_classes": 4,
+      "diversity_score": 0.9771599337419674,
+      "balance_score": 133.12452749904077
+    },
+    {
+      "img_id": "biodiversity_1589",
+      "settlement_pct": 16.306304931640625,
+      "seminatural_pct": 28.075027465820312,
+      "num_classes": 4,
+      "diversity_score": 1.3161993529565454,
+      "balance_score": 128.73103192067873
+    },
+    {
+      "img_id": "biodiversity_1916",
+      "settlement_pct": 20.6756591796875,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.812482158221943,
+      "balance_score": 126.50311748065693
+    },
+    {
+      "img_id": "biodiversity_1164",
+      "settlement_pct": 16.681671142578125,
+      "seminatural_pct": 9.722137451171875,
+      "num_classes": 5,
+      "diversity_score": 1.2836392682118236,
+      "balance_score": 126.10581712059479
+    },
+    {
+      "img_id": "biodiversity_1557",
+      "settlement_pct": 20.10040283203125,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 1.046632740421822,
+      "balance_score": 125.96834156437447
+    },
+    {
+      "img_id": "biodiversity_1406",
+      "settlement_pct": 20.254135131835938,
+      "seminatural_pct": 0.00152587890625,
+      "num_classes": 3,
+      "diversity_score": 0.9464010263482979,
+      "balance_score": 125.73544886211579
+    },
+    {
+      "img_id": "biodiversity_0381",
+      "settlement_pct": 20.0042724609375,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.965792018768503,
+      "balance_score": 124.67928249237252
+    },
+    {
+      "img_id": "den0_0037",
+      "settlement_pct": 19.427108764648438,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 0.7375973327170893,
+      "balance_score": 124.51151715041308
+    },
+    {
+      "img_id": "biodiversity_2229",
+      "settlement_pct": 19.783401489257812,
+      "seminatural_pct": 0.5802154541015625,
+      "num_classes": 3,
+      "diversity_score": 0.8764962511274523,
+      "balance_score": 122.97207768461436
+    },
+    {
+      "img_id": "biodiversity_1099",
+      "settlement_pct": 16.04461669921875,
+      "seminatural_pct": 18.12591552734375,
+      "num_classes": 4,
+      "diversity_score": 1.287509082316109,
+      "balance_score": 122.16113208292671
+    },
+    {
+      "img_id": "biodiversity_0744",
+      "settlement_pct": 18.087005615234375,
+      "seminatural_pct": 1.3843536376953125,
+      "num_classes": 4,
+      "diversity_score": 1.095876549012788,
+      "balance_score": 122.0859703851474
+    },
+    {
+      "img_id": "biodiversity_0998",
+      "settlement_pct": 19.824981689453125,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.7860833953786613,
+      "balance_score": 121.98574240105224
+    },
+    {
+      "img_id": "biodiversity_1500",
+      "settlement_pct": 19.422531127929688,
+      "seminatural_pct": 0.2620697021484375,
+      "num_classes": 3,
+      "diversity_score": 0.8755218487411466,
+      "balance_score": 120.99890897813412
+    },
+    {
+      "img_id": "biodiversity_1101",
+      "settlement_pct": 12.467575073242188,
+      "seminatural_pct": 53.15589904785156,
+      "num_classes": 4,
+      "diversity_score": 1.181013297881928,
+      "balance_score": 120.725957868956
+    },
+    {
+      "img_id": "biodiversity_1509",
+      "settlement_pct": 16.701507568359375,
+      "seminatural_pct": 9.126663208007812,
+      "num_classes": 4,
+      "diversity_score": 1.23033432097473,
+      "balance_score": 120.37421265554808
+    },
+    {
+      "img_id": "biodiversity_0537",
+      "settlement_pct": 19.295501708984375,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.8794044804365828,
+      "balance_score": 120.2715533492877
+    },
+    {
+      "img_id": "biodiversity_0424",
+      "settlement_pct": 17.28515625,
+      "seminatural_pct": 7.29217529296875,
+      "num_classes": 4,
+      "diversity_score": 1.0123596383105957,
+      "balance_score": 120.19546527959034
+    },
+    {
+      "img_id": "biodiversity_1510",
+      "settlement_pct": 18.843841552734375,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.9959183275638612,
+      "balance_score": 119.17839103931048
+    },
+    {
+      "img_id": "biodiversity_1962",
+      "settlement_pct": 19.023513793945312,
+      "seminatural_pct": 0.0,
+      "num_classes": 3,
+      "diversity_score": 0.8959253017480977,
+      "balance_score": 119.07682198720754
+    },
+    {
+      "img_id": "biodiversity_0360",
+      "settlement_pct": 17.463302612304688,
+      "seminatural_pct": 0.0,
+      "num_classes": 4,
+      "diversity_score": 1.165989359062105,
+      "balance_score": 118.97640665214449
+    }
+  ]
+}

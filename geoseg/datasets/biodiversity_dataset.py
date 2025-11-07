@@ -54,12 +54,61 @@ def get_training_transform():
 
 
 def train_aug(img, mask):
-    # multi-scale training and crop
-    crop_aug = Compose([RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode='value'),
-                        SmartCropV1(crop_size=256, max_ratio=0.75, ignore_index=0, nopad=False)])
-    img, mask = crop_aug(img, mask)
+    # Strategic cropping: 70% minority class focused, 30% random
+    # Minority classes: Settlement (4), SemiNatural (5)
+    use_strategic = random.random() < 0.7
+    
+    if use_strategic:
+        mask_np = np.array(mask)
+        minority_coords = np.argwhere(np.isin(mask_np, [4, 5]))
+        
+        if len(minority_coords) > 0:
+            # Pick random minority class pixel as center
+            center_y, center_x = minority_coords[random.randint(0, len(minority_coords)-1)]
+            
+            # Apply multi-scale first
+            scale_aug = Compose([RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode='value')])
+            img, mask = scale_aug(img, mask)
+            img, mask = np.array(img), np.array(mask)
+            
+            # Center crop on minority class pixel
+            h, w = img.shape[:2]
+            crop_size = 256
+            
+            # Calculate crop boundaries centered on minority pixel
+            y1 = max(0, center_y - crop_size // 2)
+            x1 = max(0, center_x - crop_size // 2)
+            y2 = min(h, y1 + crop_size)
+            x2 = min(w, x1 + crop_size)
+            
+            # Adjust if crop goes out of bounds
+            if y2 - y1 < crop_size:
+                y1 = max(0, y2 - crop_size)
+            if x2 - x1 < crop_size:
+                x1 = max(0, x2 - crop_size)
+                
+            img = img[y1:y2, x1:x2]
+            mask = mask[y1:y2, x1:x2]
+            
+            # Pad if needed
+            if img.shape[0] < crop_size or img.shape[1] < crop_size:
+                pad_h = max(0, crop_size - img.shape[0])
+                pad_w = max(0, crop_size - img.shape[1])
+                img = np.pad(img, ((0, pad_h), (0, pad_w), (0, 0)), mode='constant')
+                mask = np.pad(mask, ((0, pad_h), (0, pad_w)), mode='constant')
+        else:
+            # Fallback to random crop if no minority classes
+            crop_aug = Compose([RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode='value'),
+                                SmartCropV1(crop_size=256, max_ratio=0.75, ignore_index=0, nopad=False)])
+            img, mask = crop_aug(img, mask)
+            img, mask = np.array(img), np.array(mask)
+    else:
+        # Random crop (30% of the time)
+        crop_aug = Compose([RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode='value'),
+                            SmartCropV1(crop_size=256, max_ratio=0.75, ignore_index=0, nopad=False)])
+        img, mask = crop_aug(img, mask)
+        img, mask = np.array(img), np.array(mask)
 
-    img, mask = np.array(img), np.array(mask)
     aug = get_training_transform()(image=img.copy(), mask=mask.copy())
     img, mask = aug['image'], aug['mask']
     return img, mask
@@ -117,7 +166,9 @@ class BiodiversityTrainDataset(Dataset):
 
         rural_img_filename_list = os.listdir(osp.join(data_root, 'Rural', img_dir))
         rural_mask_filename_list = os.listdir(osp.join(data_root, 'Rural', mask_dir))
-        assert len(rural_img_filename_list) == len(rural_mask_filename_list)
+        print(f"DEBUG: Found {len(rural_img_filename_list)} images and {len(rural_mask_filename_list)} masks")
+        assert len(rural_img_filename_list) == len(rural_mask_filename_list), \
+            f"Mismatch: {len(rural_img_filename_list)} images vs {len(rural_mask_filename_list)} masks"
         rural_img_ids = [(str(id.split('.')[0]), 'Rural') for id in rural_img_filename_list]
         img_ids = rural_img_ids
 

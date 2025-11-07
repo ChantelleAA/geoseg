@@ -10,36 +10,36 @@ from tools.utils import Lookahead
 from tools.utils import process_model_params
 
 # training hparam
-max_epoch = 45
+max_epoch = 60  # Continue from epoch 32 to 60 (28 more epochs)
 ignore_index = 0
 train_batch_size = 2  # reduced from 4 to avoid OOM with KD
 val_batch_size = 2    # reduced from 4 to avoid OOM with KD
-lr = 6e-4
+lr = 6e-4  # Standard learning rate
 weight_decay = 2.5e-4
-backbone_lr = 6e-5
+backbone_lr = 6e-5  # Standard backbone LR
 backbone_weight_decay = 2.5e-4
 num_classes = 6  # new taxonomy: Forest, Grassland, Cropland, Settlement, SemiNatural, Background
 classes = CLASSES  # updated in biodiversity_dataset.py
 
 # knowledge distillation params
 kd_temperature = 2.0
-kd_alpha = 0.5  # OPTIMIZED: weight for KD loss (1-alpha for hard targets) - sweep showed 0.5 best
+kd_alpha = 0.3  # Trust corrected ground truth more, reduce teacher influence on Settlement
 rangeland_split_alpha = 0.7  # probability of mapping Rangeland to Grassland vs SemiNatural
 teacher_checkpoint = 'pretrain_weights/u-efficientnet-b4_s0_CELoss_pretrained.pth'  # path to teacher checkpoint
 
 # training config
-weights_name = "ftunetformer-kd-512-crop-ms-e45"
+weights_name = "ftunetformer-kd-512-crop-ms-augmented"
 weights_path = "model_weights/biodiversity/{}".format(weights_name)
-test_weights_name = "ftunetformer-kd-512-crop-ms-e45"
+test_weights_name = "ftunetformer-kd-512-crop-ms-augmented-v8"  # Epoch 39 - best model (87.57% mIoU)
 log_name = 'biodiversity/{}'.format(weights_name)
 monitor = 'val_mIoU'
 monitor_mode = 'max'
 save_top_k = 3
 save_last = False
 check_val_every_n_epoch = 1
-pretrained_ckpt_path = None
+pretrained_ckpt_path = 'model_weights/biodiversity/ftunetformer-kd-512-crop-ms-augmented/ftunetformer-kd-512-crop-ms-augmented-v5.ckpt'  # Load weights from epoch ~18
 gpus = 'auto'
-resume_ckpt_path = None  # Train from scratch with corrected ground truth
+resume_ckpt_path = None  # Can't resume optimizer state due to Lookahead incompatibility
 
 # define the student network (6 classes)
 net = ft_unetformer(num_classes=num_classes, decoder_channels=256)

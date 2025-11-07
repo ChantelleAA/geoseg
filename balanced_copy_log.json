@@ -1,0 +1,7 @@
+{
+  "source": "data/Biodiversity_tiff/Train",
+  "destination": "data/biodiversity/Train/Rural",
+  "images_copied": 50,
+  "images_failed": 0,
+  "total_requested": 50
+}
